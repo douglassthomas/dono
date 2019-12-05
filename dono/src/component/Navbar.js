@@ -10,10 +10,24 @@ class Navbar extends Component{
     }
 
 
+    componentDidMount(){
+        window.addEventListener('scroll', this.handleScroll, true)
+    }
+
+    handleScroll = ()=>{
+        var y = window.scrollY
+        if(y>350){
+            document.getElementById("navbar").className = 'navbar-sticky'
+        }
+        else{
+            document.getElementById("navbar").className = 'navbar'
+        }
+    }
+
     render(){
         return(
         <>
-            <div className='navbar'>
+            <div id="navbar" className='navbar'>
                 <div className='navbar-container'>
                     <Link to='/'>
                         <img width='180px' height='70px' src='../../assets/dono-navbar-logo.png'/>
