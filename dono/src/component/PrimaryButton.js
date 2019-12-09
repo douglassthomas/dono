@@ -2,15 +2,27 @@ import React, {Component} from 'react'
 
 class PrimaryButton extends Component{
 
+    constructor(){
+        super()
+
+        this.state = {
+            arrow: <span className='primary-btn-shade'>></span>
+        }
+    }
 
     render(){
-
         return(
         <button className='primary-btn' onMouseEnter={()=>{
-            document.getElementById('primary-btn-shade').id = 'primary-btn-shade2'
+            this.setState({
+                arrow: <span className='primary-btn-shade2'>></span>
+            })
         }} onMouseLeave={()=>{
-            document.getElementById('primary-btn-shade2').id = 'primary-btn-shade'
-        }}>{this.props.title}<span id='primary-btn-shade'>></span></button>
+            this.setState({
+                arrow: <span className='primary-btn-shade'>></span>
+            })
+        }}>{this.props.title}
+            {this.state.arrow}
+        </button>
                 
         )
     }

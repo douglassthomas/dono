@@ -206,7 +206,7 @@ h1{
   z-index: 10;
 }
 
-#primary-btn-shade{
+.primary-btn-shade{
   position: absolute;
   margin: 0;
   margin-left: 5px;
@@ -217,7 +217,7 @@ h1{
   background-image: linear-gradient(to right, #0562a8, #0562a8);
 }
 
-#primary-btn-shade2{
+.primary-btn-shade2{
   position: absolute;
   margin: 0;
   margin-left: 10px;
@@ -228,7 +228,8 @@ h1{
   background-image: linear-gradient(to right, #2bc1f6, #138ee9);
   height: 200px;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .footer-mid{
@@ -241,10 +242,20 @@ h1{
   align-items: flex-end;
 }
 
+.footer-bottom{
+  width: 100%;
+  max-width: 1250px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
 .social-container{
   height: 70px;
   font-size: 15px;
-  align-items: flex-start;
+  align-items: flex-end;
   flex-direction: column;
 }
 
